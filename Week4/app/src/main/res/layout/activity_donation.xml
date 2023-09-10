@@ -1,0 +1,30 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/linear_donation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Linear Donation"></Button>
+
+    <Button
+        android:id="@+id/constraint_donation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Constraint Donation"></Button>
+
+    <Button
+        android:id="@+id/relative_donation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Relative Donation"></Button>
+
+    <Button
+        android:id="@+id/table_donation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Table Donation"></Button>
+
+</LinearLayout>

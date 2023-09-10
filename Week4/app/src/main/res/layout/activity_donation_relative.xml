@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        app:menu="@menu/app_bar_menu"
+        app:title="Donation.1.5"
+        app:titleTextColor="@color/white" />
+
+    <TextView
+        android:id="@+id/greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_margin="10dp"
+        android:layout_marginStart="15dp"
+        android:text="Welcome Homer"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/please"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/greeting"
+        android:layout_margin="10dp"
+        android:alpha="0.5"
+        android:text="Please Give Generously"
+        android:textSize="24sp" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/please"
+        android:layout_margin="10dp"
+        android:layout_weight="1">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PayPal" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Direct" />
+    </RadioGroup>
+
+    <NumberPicker
+        android:id="@+id/picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/please"
+        android:layout_alignRight="@id/toolbar" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/picker"
+        android:layout_marginHorizontal="10dp"
+        android:indeterminate="true" />
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress"
+        android:layout_alignLeft="@id/progress"
+        android:layout_marginTop="10dp"
+        android:text="Amount"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress"
+        android:layout_alignRight="@id/progress"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/amount"
+        android:layout_alignLeft="@id/amount"
+        android:layout_marginTop="10dp"
+        android:text="DONATE" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:text="Total so Far   $1998"
+        android:textAlignment="center"
+        android:layout_below="@id/edit"
+        android:layout_centerHorizontal="true"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/baseline_mail_24"
+        android:tint="@color/white"
+        app:backgroundTint="@color/white"
+        android:layout_below="@id/progress"
+        android:layout_alignRight="@id/progress"
+        android:layout_marginTop="300dp"/>
+
+</RelativeLayout>
