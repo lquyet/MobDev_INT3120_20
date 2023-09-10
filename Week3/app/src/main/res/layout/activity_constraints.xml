@@ -1,0 +1,53 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/one"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:background="#D15C5C"
+        android:gravity="center"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/two"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:background="#2B8872"
+        android:gravity="center"
+        android:text="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/one"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/three"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:background="#6B3491"
+        android:gravity="center"
+        android:text="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/one"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/four"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:background="#DEE164"
+        android:gravity="center"
+        android:text="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/three"
+        app:layout_constraintTop_toBottomOf="@id/four"
+        tools:ignore="HardcodedText" />
+</androidx.constraintlayout.widget.ConstraintLayout>
