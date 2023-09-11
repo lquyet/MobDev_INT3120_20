@@ -6,4 +6,138 @@
     android:layout_height="match_parent"
     tools:context=".EssentialConstraint">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Essentials of Developing Android 5.0"
+        app:titleTextColor="@color/white" />
+
+    <EditText
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Enter your name"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <EditText
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your phone number"
+        app:layout_constraintTop_toBottomOf="@id/text1" />
+
+    <RadioGroup
+        android:id="@+id/group1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/text2">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cheese" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 x Cheese" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="None"
+
+            />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/group2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/group1">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Square" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="round" />
+    </RadioGroup>
+
+
+    <CheckBox
+        android:id="@+id/check1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pepperoni"
+        app:layout_constraintLeft_toLeftOf="@id/group2"
+        app:layout_constraintTop_toBottomOf="@id/group2" />
+
+    <CheckBox
+        android:id="@+id/check2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mushroom"
+        app:layout_constraintLeft_toRightOf="@id/check1"
+        app:layout_constraintTop_toTopOf="@id/check1" />
+
+    <CheckBox
+        android:id="@+id/check3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Veggies"
+        app:layout_constraintLeft_toRightOf="@id/check2"
+        app:layout_constraintTop_toTopOf="@id/check2" />
+
+    <TextView
+        android:id="@+id/order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Ordering"
+        app:layout_constraintTop_toBottomOf="@id/check1" />
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:background="#ccc"
+        android:gravity="top"
+        android:inputType="text|textMultiLine"
+        app:layout_constraintTop_toBottomOf="@id/order" />
+
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/btn1"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:backgroundTint="#ccc"
+        app:layout_constraintTop_toBottomOf="@id/edit"
+        app:layout_constraintLeft_toLeftOf="@id/order"
+        android:text="EXIT" />
+
+    <Button
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_weight="1"
+        android:backgroundTint="#ccc"
+        android:text="SMS-PLACE YOUR ORDER"
+        app:layout_constraintRight_toRightOf="@id/edit"
+        app:layout_constraintTop_toTopOf="@id/btn1" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
