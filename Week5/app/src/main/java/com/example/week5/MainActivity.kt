@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             DatePickerDialog.OnDateSetListener { _: DatePicker, selectedYear: Int, selectedMonth: Int, selectedDay: Int ->
                 // Handle the selected date
                 val selectedDate = "$selectedDay/${selectedMonth + 1}/$selectedYear"
-                print(selectedDate)
+                binding.text.text = selectedDate
             },
             year,
             month,
@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
             TimePickerDialog.OnTimeSetListener { _: TimePicker, selectedHour: Int, selectedMinute: Int ->
                 // Handle the selected time
                 val selectedTime = String.format("%02d:%02d", selectedHour, selectedMinute)
-                print(selectedTime)
+                binding.text.text = selectedTime
             },
             hour,
             minute,

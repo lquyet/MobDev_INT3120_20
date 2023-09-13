@@ -19,7 +19,14 @@ class MainActivity : AppCompatActivity() {
             essentials.setOnClickListener {
                 startActivity(Intent(this@MainActivity, Essential::class.java))
             }
+            grid.setOnClickListener {
+                startActivity(Intent(this@MainActivity, GridActivity::class.java))
+            }
+            spinner.setOnClickListener {
+                startActivity(Intent(this@MainActivity, SpinnerActivity::class.java))
+            }
         }
         setContentView(binding.root)
     }
+
 }

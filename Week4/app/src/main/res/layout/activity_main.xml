@@ -23,4 +23,22 @@
         android:text="Essential of Developing Android 5.0"
         ></Button>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/grid"
+        app:layout_constraintTop_toBottomOf="@+id/essentials"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Grid View"
+        ></Button>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        app:layout_constraintTop_toBottomOf="@+id/grid"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Spinner View"
+        ></Button>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
